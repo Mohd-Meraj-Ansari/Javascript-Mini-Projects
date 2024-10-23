@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="display">
+          <div class="displayScreen"></div>
+        </div>
+
+        <div class="buttonsArea">
+
+         <table>
+            <tr>
+               <td><button class="btn-operator" id="all-Clear">AC</button></td>
+               <td><button class="btn-operator" id="%">%</button></td>
+               <td><button class="btn-operator divide" id="/">&divide;</button></td>
+               <td><button class="btn-operator orange-btn" id="clear">C</button></td>
+            </tr>
+            
+            <tr>
+               <td><button class="btn-number" id="7">7</button></td>
+               <td><button class="btn-number" id="8">8</button></td>
+               <td><button class="btn-number" id="9">9</button></td>
+               <td><button class="btn-operator orange-btn" id="*">&times;</button></td>
+            </tr>
+            
+            <tr>
+               <td><button class="btn-number" id="4">4</button></td>
+               <td><button class="btn-number" id="5">5</button></td>
+               <td><button class="btn-number" id="6">6</button></td>
+               <td><button class="btn-operator orange-btn" id="-">-</button></td>
+            </tr>
+            
+            <tr>
+               <td><button class="btn-number" id="1">1</button></td>
+               <td><button class="btn-number" id="2">2</button></td>
+               <td><button class="btn-number" id="3">3</button></td>
+               <td><button class="btn-operator orange-btn" id="+">+</button></td>
+            </tr>
+            
+            <tr>
+               <td colspan="2"><button class="btn-number double" id="0">0</button></td>
+               <td><button class="btn-number" id=".">.</button></td>
+               <td><button class="btn-operator orange-btn" id="=">=</button></td>
+               
+            </tr>
+         </table>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
