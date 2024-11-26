@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e8e8e8;
+}
+
+.clock {
+  height: 40rem;
+  width: 40rem;
+  background: url("https://a0.anyrgb.com/pngimg/1306/2032/blank-number-street-clock-floral-clock-roman-numerals-clock-face-digital-clock-alarm-clock-blank-clock-square.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.hour,
+.minute,
+.second {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.hour {
+  width: 13rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hour::before {
+  content: "";
+  height: 50%;
+  width: 8px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.minute {
+  width: 15rem;
+  height: 20rem;
+}
+
+.minute::before {
+  content: "";
+  height: 50%;
+  width: 4px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.second {
+  width: 17rem;
+  height: 25rem;
+}
+
+.second::before{
+  content: "";
+  height: 50%;
+  width: 2px;
+  border-radius: 10px;
+  background-color: red;
+}
