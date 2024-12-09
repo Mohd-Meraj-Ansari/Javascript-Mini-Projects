@@ -8,35 +8,33 @@ body {
   background-color: whitesmoke;
 }
 
-.container{
+.container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(45deg, red,white);
+  background: linear-gradient(45deg, red, white);
   position: relative;
 }
 
-.inner{
+.inner {
   width: 600px;
   height: 180px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
 }
 
-.clock{
+.clock {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: rgba(104, 22, 22,0.5);
+  background-color: rgba(104, 22, 22, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-.clock span{
+.clock span {
   font-size: 70px;
   color: whitesmoke;
   width: 100px;
@@ -45,8 +43,8 @@ body {
   position: relative;
 }
 
-.clock span::after{
-  content: '';
+.clock span::after {
+  content: "";
   font-size: 16px;
   position: absolute;
   bottom: -15px;
@@ -54,12 +52,12 @@ body {
   transform: translate(-50%);
 }
 
-#hr::after{
-  content: 'HOURS';
+#hr::after {
+  content: "HOURS";
 }
-#min::after{
-  content: 'MINUTES';
+#min::after {
+  content: "MINUTES";
 }
-#sec::after{
-  content: 'SECONDS';
+#sec::after {
+  content: "SECONDS";
 }
