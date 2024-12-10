@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="block-1">
+          <h1>Notes <img src="./images/notes-icon.png" alt="notes icon" /></h1>
+          <button id="add-btn">+</button>
+        </div>
+        <div class="newNote"></div>
+      </div>
+
+      <div class="addTask">
+        <div class="head">
+          <h2>New Note</h2>
+          <button class="deleteNote">
+            <img
+              src="./images/cross-icon.png"
+              alt="cross icon"
+              id="cross-icon"
+            />
+          </button>
+        </div>
+
+        <div class="body">
+          <p>Title</p>
+          <input type="text" class="text" id="title" />
+
+          <p>Description</p>
+          <textarea id="desc" cols="35" rows="10"></textarea>
+          <br />
+          <button id="add-Note">Add</button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
