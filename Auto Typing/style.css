@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(197, 186, 186);
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+h1 {
+  font-size: 3.5rem;
+}
+
+span {
+  color: firebrick;
+  display: inline-flex;
+}
+
+span::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 55px;
+  background-color: firebrick;
+  margin-left: 2px;
+}
