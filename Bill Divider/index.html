@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Divider</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Bill-input">
+        <div class="section" id="first">
+          <p>Bill</p>
+          <div class="input-con">
+            <span id="sym">₹</span>
+            <input type="number" class="b-ip" id="bill-ip" />
+          </div>
+        </div>
+
+        <div class="section" id="second">
+          <p>Select Tip</p>
+          <div class="tipContainer disabled">
+            <button class="tip">5% <br><span id="tipvalue5"></span></button>
+            <button class="tip">10% <br><span id="tipvalue10"></span></button>
+            <button class="tip">15% <br><span id="tipvalue15"></span></button>
+            <button class="tip">20% <br><span id="tipvalue20"></span></button>
+            <button class="tip">25% <br><span id="tipvalue25"></span></button>
+            <button class="tip">50% <br><span id="tipvalue50"></span></button>
+          </div>
+          <div class="input-con">
+            <input
+              type="number"
+              placeholder="Custom tip in percentage"
+              id="second-ip"
+              disabled
+            />
+            <span id="sym">%</span>
+          </div>
+        </div>
+
+        <div class="section" id="third">
+          <p id="person">Number of Persons</p>
+          <input type="number" class="b-ip" id="third-ip" disabled />
+        </div>
+
+        <button id="generate-bill" disabled>Generate Bill</button>
+      </div>
+
+      <div class="Bill-output">
+        <div class="section" id="output-first">
+          <label>Bill Amount</label>
+          <span id="bill-display">₹ 0</span>
+        </div>
+        <div class="section" id="output-second">
+          <label>Tip Amount</label>
+          <span id="tip-am">₹ 0</span>
+        </div>
+        <div class="section" id="output-third">
+          <label>Total</label>
+          <span id="totalAmt">₹ 0</span>
+        </div>
+
+        <div class="section" id="output-fourth">
+          <label>Per Person Bill</label>
+          <span id="perPerson">₹ 0</span>
+        </div>
+
+        <button id="reset" disabled>Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
