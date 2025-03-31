@@ -33,7 +33,7 @@ main{
   display: flex;
   gap: 65px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 a{
@@ -50,6 +50,7 @@ a{
   overflow: hidden;
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
+  background-color: rgb(238, 233, 227);
 }
 
 .country-card img{
@@ -65,6 +66,7 @@ a{
   margin: 25px;
   margin-block: 20px;
   font-size: 18px;
+  
 }
 
 .c-name{
