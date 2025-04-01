@@ -3,7 +3,9 @@ const countryContainer = document.querySelector(".container");
 fetch("https://restcountries.com/v3.1/all")
   .then((response) => response.json())
   .then((data) => {
+    
     data.forEach((country) => {
+      // console.log(country.capital);
       const countryCard = document.createElement("a");
       countryCard.classList.add("country-card");
       countryCard.href = `/WorldView/country.html?name=${country.name.common}`;
@@ -15,7 +17,7 @@ fetch("https://restcountries.com/v3.1/all")
               "en-IN"
             )}</p>
             <p><b>Region: </b> ${country.region}</p>
-            <p><b>Capital: </b> ${country.capital}</p>
+            <p><b>Capital: </b> ${country.capital.join(', ')}</p>
           </div>`;
 
       countryCard.innerHTML = cardHtml;

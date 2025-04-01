@@ -16,33 +16,44 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="country.css" />
-    <script src="country.js"></script>
+    <script src="country.js" defer></script>
   </head>
   <body>
+    <header class="header-container">
+      <div class="heading">
+        <h2>Explore the World...</h2>
+        <p><i class="fa-regular fa-moon"></i>&nbsp; Dark Mode</p>
+      </div>
+    </header>
+
     <div class="container">
-      <header>
-        <button id="backBtn"><i class="fa-solid fa-arrow-left-long"></i>&nbsp;&nbsp;back</button>
-      </header>
+      <div class="backButton">
+        <span id="backBtn" onclick="history.back()">
+          <i class="fa-solid fa-arrow-left-long"></i>&nbsp;&nbsp;back
+        </span>
+      </div>
 
       <main>
         <div class="left">
-          <img src="https://flagcdn.com/tn.svg" alt="country flag" />
+          <img src="" alt="country flag" />
         </div>
 
         <div class="right">
-          <h2>Country Name</h2>
+          <h2 id="cName">Country : <span id="country-Name"></span></h2>
 
           <div class="country-details">
-            <p><b>Native name: </b></p>
-            <p><b>Population :</b></p>
-            <p><b>Region :</b></p>
-            <p><b>Sub Region :</b></p>
-            <p><b>Capital :</b></p>
-            <p><b>Currency :</b></p>
-            <p><b>Languages :</b></p>
+            <p><b>Capital :</b> <span id="cap"></span></p>
+            <p><b>Native name :</b> <span id="native"></span></p>
+            <p><b>Population :</b> <span id="pop"></span></p>
+            <p><b>Region :</b> <span id="reg"></span></p>
+            <p><b>Sub Region :</b> <span id="sub-reg"></span></p>
+            <p><b>Currency :</b> <span id="cur"> </span></p>
+            <p><b>Languages :</b> <span id="lan"></span></p>
           </div>
 
-          <p class="border-country"><b>Border countries :</b></p>
+          <div class="border-country">
+            <b>Border countries :</b>
+          </div>
         </div>
       </main>
     </div>
