@@ -4,28 +4,52 @@
   box-sizing: border-box;
 }
 
+/* :root */
+
 body {
+  --background-color: white;
+  --text-color: black;
+  --element-color: white;
+
   font-family: Nunito, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: white;
+  --element-color: hsl(209, 23%, 22%);
 }
 
 main {
+  background-color: var(--background-color);
   padding: 30px;
 }
 .header-container {
+  position: relative;
   box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);
   padding: 20px;
+  background-color: var(--element-color);
 }
 
 .heading {
+  background-color: var(--element-color);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin-inline: auto;
-  background-color: rgb(255, 253, 253);
+}
+
+#mode {
+  cursor: pointer;
 }
 
 .search-filter-container {
+  max-width: 1200px;
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
@@ -34,6 +58,7 @@ main {
 }
 
 .search-container {
+  background-color: var(--element-color);
   max-width: 300px;
   height: 40px;
   padding-left: 15px;
@@ -43,6 +68,8 @@ main {
 }
 
 .search-container input {
+  background-color: var(--element-color);
+  color: var(--text-color);
   font-size: 20px;
   height: 100%;
   border: none;
@@ -54,7 +81,8 @@ main {
 }
 
 select {
-  text-align: center;
+  background-color: var(--element-color);
+  color: var(--text-color);
   width: 150px;
   padding: 10px;
   height: 40px;
@@ -65,12 +93,13 @@ select {
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1200px;
+  margin-inline: auto;
   margin-top: 20px;
   display: flex;
-  gap: 60px;
+  gap: 64px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 a {
@@ -80,14 +109,15 @@ a {
 
 .country-card {
   display: inline-block;
-  width: 280px;
+  height: 450px;
+  width: 350px;
   border: 4px;
   border-radius: 4px;
   margin-top: 20px;
   overflow: hidden;
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
-  background-color: rgb(238, 233, 227);
+  background-color: var(--element-color);
 }
 
 .country-card img {

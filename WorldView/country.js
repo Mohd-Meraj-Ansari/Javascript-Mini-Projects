@@ -8,15 +8,24 @@ const currency = document.getElementById("cur");
 const language = document.getElementById("lan");
 const image = document.querySelector("img");
 const borderCountries = document.querySelector(".border-country");
+const theme = document.querySelector("#mode");
 
 const countryName = new URLSearchParams(location.search).get("name");
-//console.log(countryName);
+
+let isDark = false;
+let isDarkMode = JSON.parse(localStorage.getItem('Dark')) 
+
+applyTheme();
+
+if(isDarkMode){
+  isDark = true
+} else{
+  isDark = false
+}
 
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .then((response) => response.json())
   .then(([country]) => {
-    console.log(country.name.common);
-
     image.src = country.flags.svg;
     cName.innerText = country.name.common;
 
@@ -61,11 +70,36 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
           .then((response) => response.json())
           .then(([borderCountry]) => {
             const CountryTag = document.createElement("a");
+            CountryTag.className = "border-a";
             CountryTag.innerText = borderCountry.name.common;
-            CountryTag.href = `/WorldView/country.html?name=${borderCountry.name.common}`
-            // console.log(CountryTag);
+            CountryTag.href = `/WorldView/country.html?name=${borderCountry.name.common}`;
             borderCountries.append(CountryTag);
           });
       });
     }
   });
+
+theme.addEventListener("click", () => {
+  if (isDark) {
+    isDark = false;
+    localStorage.setItem("Dark", true);
+    theme.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp; Dark Mode`;
+    document.body.classList.remove("dark");
+  } else {
+    isDark = true;
+    localStorage.setItem("Dark", false);
+    theme.innerHTML = `<i class="fa-solid fa-sun"></i>&nbsp; Light Mode`;
+    document.body.classList.add("dark");
+  }
+});
+
+function applyTheme(){
+  if (isDarkMode) {
+    theme.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp; Dark Mode`;
+    document.body.classList.remove("dark");
+  } else {
+    theme.innerHTML = `<i class="fa-solid fa-sun"></i>&nbsp; Light Mode`;
+    document.body.classList.add("dark");
+  }
+}
+

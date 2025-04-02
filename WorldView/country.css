@@ -5,8 +5,19 @@
 }
 
 body {
+  --background-color: white;
+  --text-color: black;
+  --element-color: white;
+
   font-family: Nunito, sans-serif;
-  background-color: rgb(238, 233, 227);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: white;
+  --element-color: hsl(209, 23%, 22%);
 }
 
 .container {
@@ -16,17 +27,25 @@ body {
 .header-container {
   box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.3);
   padding: 20px;
-  z-index: 100;
-  background-color: rgb(255, 253, 253);
+  background-color: var(--element-color);
 }
 
 .heading {
+  background-color: var(--element-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin-inline: auto;
-  /* background-color: rgb(255, 253, 253); */
+}
+
+a {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+#mode {
+  cursor: pointer;
 }
 
 .backButton {
@@ -42,13 +61,14 @@ main {
   padding: 10px 20px;
   text-decoration-line: none;
   cursor: pointer;
-  color: black;
+  background-color: var(--element-color);
+  color:var(--text-color);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
   border: 1px solid black;
   border-radius: 8px;
 }
 
-#backBtn:hover{
+#backBtn:hover {
   color: white;
   background-color: black;
 }
@@ -57,6 +77,7 @@ img {
   object-fit: cover;
   height: 350px;
   width: 500px;
+  border: 1px solid black;
 }
 
 .left {
@@ -84,14 +105,15 @@ img {
   flex-wrap: wrap;
 }
 
-a{
+.border-a {
   padding: 10px 10px;
   margin-left: 5px;
   margin-bottom: 10px;
   font-size: 15px;
   text-decoration-line: none;
   cursor: pointer;
-  color: black;
+  background-color: var(--element-color);
+  color: var(--text-color);
   border-radius: 10px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }
