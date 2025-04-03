@@ -1,40 +1,98 @@
 const questions = [
   {
-    question: 'In avaition, what does "V1" refer to?',
+    question:
+      "Which function is used to serialize an object into a JSON string in Javascript?",
     answers: [
-      { text: "Maximum Landing Speed", correct: false },
-      { text: "Takeoff Decision Speed", correct: true },
-      { text: "Speed with Afterburners", correct: false },
-      { text: "Stall Speed", correct: false },
+      { text: "parse()", correct: false },
+      { text: "stringify()", correct: true },
+      { text: "convert()", correct: false },
+      { text: "None of the above", correct: false },
     ],
   },
   {
-    question: 'what does "ICAO" stands for?',
+    question: "Which object in Javascript doesn’t have a prototype?",
     answers: [
-      { text: "International Civil Aviation Organization", correct: true },
-      { text: "INTERNATIONAL Cargo Aviation Oganization", correct: false },
-      { text: "International Civil Aviation Office", correct: false },
-      { text: "International Commercial Air Operations", correct: false },
+      { text: "Base Object", correct: true },
+      { text: "All objects have a prototype", correct: false },
+      { text: "None of the objects have a prototype ", correct: false },
+      { text: "None of the above", correct: false },
     ],
   },
   {
-      question : "Which is the world's 1st 5th generation aircraft?",
-      answers: [
-        { text: "F-117", correct: false },
-        { text: "F-35", correct: false },
-        { text: "F-22", correct: true },
-        { text: "SU-57", correct: false },
-      ],
+    question: "Which of the following are closures in Javascript",
+    answers: [
+      { text: "Variables", correct: false },
+      { text: "Functions", correct: false },
+      { text: "Objects", correct: false },
+      { text: "All of the above", correct: true },
+    ],
   },
   {
-    question : "Which aircraft manufacturer is absed in Toulouse, France?",
+    question: "Which of the following are not server-side Javascript objects?",
     answers: [
-      { text: "Airbus", correct: true },
-      { text: "Boeing", correct: false },
-      { text: "Embraer", correct: false },
-      { text: "Ilyushin", correct: false },
+      { text: "Date", correct: false },
+      { text: "FileUpload", correct: false },
+      { text: "Function", correct: false },
+      { text: "All of the above", correct: true },
     ],
-},
+  },
+  {
+    question: "Which of the following is not a Javascript framework?",
+    answers: [
+      { text: "Node", correct: false },
+      { text: "Vue", correct: false },
+      { text: "React", correct: false },
+      { text: "Cassandra", correct: true },
+    ],
+  },
+  {
+    question:
+      "Which of the following keywords is used to define a variable in Javascript?",
+    answers: [
+      { text: "var", correct: false },
+      { text: "let", correct: false },
+      { text: "Both", correct: true },
+      { text: "None of the above", correct: false },
+    ],
+  },
+  {
+    question:
+      "Which of the following methods can be used to display data in some form using Javascript?",
+    answers: [
+      { text: "document.write()", correct: false },
+      { text: "console.log()", correct: false },
+      { text: "window.alert()", correct: false },
+      { text: "All of the above", correct: true },
+    ],
+  },
+  {
+    question:
+      "Which of the following methods is used to access HTML elements using Javascript?",
+    answers: [
+      { text: "getElementbyId()", correct: false },
+      { text: "getElementByClassName()", correct: false },
+      { text: "Both", correct: true },
+      { text: "None of the above", correct: false },
+    ],
+  },
+  {
+    question: "How to stop an interval timer in Javascript?",
+    answers: [
+      { text: "clearInterval", correct: true },
+      { text: "clearTimer", correct: false },
+      { text: "intervalOver", correct: false },
+      { text: "None of the above", correct: false },
+    ],
+  },
+  {
+    question: "How can a datatype be declared to be a constant type?",
+    answers: [
+      { text: "const", correct: true },
+      { text: "var", correct: false },
+      { text: "let", correct: false },
+      { text: "constant", correct: false },
+    ],
+  },
 ];
 
 const questionId = document.querySelector("#question");
@@ -53,7 +111,7 @@ function startQuiz() {
 
 function showQuestions() {
   resetQuestions();
- 
+
   let currentQuestion = questions[currentQueIndex];
   let questionNo = currentQueIndex + 1;
   questionId.innerHTML = questionNo + ". " + currentQuestion.question;
