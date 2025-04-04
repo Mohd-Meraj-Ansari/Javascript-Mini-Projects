@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(207, 26%, 17%);
+}
+
+.container > div {
+  background-color: white;
+  padding-block: 30px;
+  padding-inline: 50px;
+  border-radius: 20px;
+}
+
+#ip {
+  height: 30px;
+  font-size: 30px;
+  outline: none;
+  border: 1px solid;
+  padding-block: 20px;
+  padding-inline: 10px;
+  border-radius: 10px;
+}
+
+#span-container {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 10px;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.detected {
+  opacity: 1;
+  color: green;
+}
+
+.status-bar {
+  height: 15px;
+  background-color: rgb(236, 230, 230);
+  border: 1px solid gray;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.progress-value {
+  height: 100%;
+  width: 0%;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.progress-value.green {
+  background-color: green;
+}
+.progress-value.yellow {
+  background-color: rgb(255, 255, 0);
+}
+.progress-value.red {
+  background-color: red;
+}
+
+p {
+  margin-block: 15px;
+  text-align: center;
+  font-size: 25px;
+}
