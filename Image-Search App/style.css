@@ -27,7 +27,7 @@ h3 {
 form {
   display: flex;
 }
-.search-area {
+#search-area {
   display: flex;
   justify-content: center;
 }
@@ -79,12 +79,62 @@ button:hover {
 
 #show-more {
   font-size: 20px;
-  width: 100px;
+  width: 150px;
   border-radius: 25px;
   background-color: #dfd0b8;
   color: black;
   outline: none;
   border: none;
-  margin-block: 30px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   display: none;
+  padding: 10px;
+}
+
+#content-area {
+  max-width: 80%;
+  margin: 50px auto 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+
+#content-area img {
+  width: 100% !important;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    display: inline-block;
+  }
+
+  #search-button {
+    margin-block: 20px;
+    margin-inline: 170px;
+  }
+
+  #content-area {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  #content-area img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
 }
