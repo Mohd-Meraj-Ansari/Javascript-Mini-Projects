@@ -33,7 +33,7 @@ function renderCountryCard(data) {
   data.forEach((country) => {
     const countryCard = document.createElement("a");
     countryCard.classList.add("country-card");
-    countryCard.href = `/WorldView/country.html?name=${country.name.common}`;
+    countryCard.href = `/Javascript-Mini-Projects/WorldView/country.html?name=${country.name.common}`;
 
     const cardHtml = `<img src="${country.flags.svg}" alt="flag" />
         <div class="card-content">
@@ -52,7 +52,7 @@ function renderCountryCard(data) {
 }
 
 searchInput.addEventListener("input", (e) => {
-  // console.log(e.target.value);
+  //console.log(e.target.value);
   //country.name.common.includes(e.target.value)
 
   let filterResult = allCountries.filter((country) =>
