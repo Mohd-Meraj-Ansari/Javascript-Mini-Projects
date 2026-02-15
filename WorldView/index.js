@@ -5,17 +5,17 @@ const theme = document.querySelector("#mode");
 
 let allCountries;
 let isDark = false;
-let isDarkMode = JSON.parse(localStorage.getItem('Dark')) 
+let isDarkMode = JSON.parse(localStorage.getItem("Dark"));
 
 applyTheme();
 
-if(isDarkMode){
-  isDark = true
-} else{
-  isDark = false
+if (isDarkMode) {
+  isDark = true;
+} else {
+  isDark = false;
 }
 
-fetch("https://restcountries.com/v3.1/all")
+fetch("https://restcountries.com/v3.1/independent?status=true")
   .then((response) => response.json())
   .then((data) => {
     renderCountryCard(data);
@@ -33,13 +33,13 @@ function renderCountryCard(data) {
   data.forEach((country) => {
     const countryCard = document.createElement("a");
     countryCard.classList.add("country-card");
-    countryCard.href = `/Javascript-Mini-Projects/WorldView/country.html?name=${country.name.common}`;
+    countryCard.href = `country.html?name=${country.name.common}`;
 
     const cardHtml = `<img src="${country.flags.svg}" alt="flag" />
         <div class="card-content">
           <h4 class="c-name">${country.name.common}</h4>
           <p><b>Population: </b> ${country.population.toLocaleString(
-            "en-IN"
+            "en-IN",
           )}</p>
           <p><b>Region: </b> ${country.region}</p>
           <p><b>Capital: </b> ${country.capital}</p>
@@ -56,7 +56,7 @@ searchInput.addEventListener("input", (e) => {
   //country.name.common.includes(e.target.value)
 
   let filterResult = allCountries.filter((country) =>
-    country.name.common.toLowerCase().includes(e.target.value.toLowerCase())
+    country.name.common.toLowerCase().includes(e.target.value.toLowerCase()),
   );
 
   //console.log(e.target.value);
@@ -78,7 +78,7 @@ theme.addEventListener("click", () => {
   }
 });
 
-function applyTheme(){
+function applyTheme() {
   if (isDarkMode) {
     theme.innerHTML = `<i class="fa-regular fa-moon"></i>&nbsp; Dark Mode`;
     document.body.classList.remove("dark");
